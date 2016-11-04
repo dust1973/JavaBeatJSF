@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+
+			<h:outputText value="#{helloBean.message}"/><br></br>
+			Auto: <h:outputText value="#{helloBean.auto}"/><br></br>
+			Kategorien: <h:outputText value="#{helloBean.kategorien}"/><br></br>
+			Kategorie: <h:outputText value="#{helloBean.kategorien[1]}"/>
+
+	<h:dataTable value="#{HelloBean.kategorien}" var="item">
+		<h:column>#{item}</h:column>
+	</h:dataTable>
+
+</h:body>
+</html>
+
+
+<!--h:form>
+	<h1>
+		<h:outputText value="JavaBeat JSF 2.2 Examples" />
+	</h1>
+	<h2>
+		<h:outputText value="dataTable Example" />
+	</h2>
+	<h:outputText value="JavaBeat Site Provides the Following Tutorials:"/>
+	<br/>
+	<h4>Kategorie: #{helloBean.kategorie}</h4>
+	<h4>Name: #{helloBean.name}</h4>
+	<h4>Email: #{helloBean.email}</h4>
+	<h4>Auto: #{helloBean.auto}</h4>
+	<h:dataTable value="#{HelloBean.kategorien}" var="kategorie" border="1">
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Tutorial ID"/>
+			</f:facet>
+			<h:outputText value="#{kategorie[1]}"/>
+			<f:facet name="footer">
+				<h:outputText value="Tutorial ID"/>
+			</f:facet>
+		</h:column>
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Tutorial Description"/>
+			</f:facet>
+			<h:outputText value="#{kategorie}"/>
+			<f:facet name="footer">
+				<h:outputText value="Tutorial Description"/>
+			</f:facet>
+		</h:column>
+	</h:dataTable>
+</h:form>
+
+</h:body>
+</html-->
